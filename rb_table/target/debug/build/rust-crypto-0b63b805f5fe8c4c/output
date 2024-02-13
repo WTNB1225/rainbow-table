@@ -1,0 +1,38 @@
+TARGET = Some("aarch64-apple-darwin")
+OPT_LEVEL = Some("0")
+TARGET = Some("aarch64-apple-darwin")
+TARGET = Some("aarch64-apple-darwin")
+HOST = Some("aarch64-apple-darwin")
+CFLAGS_aarch64-apple-darwin = None
+CFLAGS_aarch64_apple_darwin = None
+HOST_CFLAGS = None
+CFLAGS = None
+DEBUG = Some("true")
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-Wall" "-Wextra" "-o" "/Users/watanabeyuki/rainbow_table/rb_table/target/debug/build/rust-crypto-0b63b805f5fe8c4c/out/src/util_helpers.o" "-c" "src/util_helpers.c"
+exit status: 0
+TARGET = Some("aarch64-apple-darwin")
+OPT_LEVEL = Some("0")
+TARGET = Some("aarch64-apple-darwin")
+TARGET = Some("aarch64-apple-darwin")
+HOST = Some("aarch64-apple-darwin")
+CFLAGS_aarch64-apple-darwin = None
+CFLAGS_aarch64_apple_darwin = None
+HOST_CFLAGS = None
+CFLAGS = None
+DEBUG = Some("true")
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-Wall" "-Wextra" "-o" "/Users/watanabeyuki/rainbow_table/rb_table/target/debug/build/rust-crypto-0b63b805f5fe8c4c/out/src/aesni_helpers.o" "-c" "src/aesni_helpers.c"
+exit status: 0
+TARGET = Some("aarch64-apple-darwin")
+TARGET = Some("aarch64-apple-darwin")
+HOST = Some("aarch64-apple-darwin")
+AR_aarch64-apple-darwin = None
+AR_aarch64_apple_darwin = None
+HOST_AR = None
+AR = None
+TARGET = Some("aarch64-apple-darwin")
+TARGET = Some("aarch64-apple-darwin")
+running: "ar" "crs" "/Users/watanabeyuki/rainbow_table/rb_table/target/debug/build/rust-crypto-0b63b805f5fe8c4c/out/lib_rust_crypto_helpers.a" "/Users/watanabeyuki/rainbow_table/rb_table/target/debug/build/rust-crypto-0b63b805f5fe8c4c/out/src/util_helpers.o" "/Users/watanabeyuki/rainbow_table/rb_table/target/debug/build/rust-crypto-0b63b805f5fe8c4c/out/src/aesni_helpers.o"
+exit status: 0
+TARGET = Some("aarch64-apple-darwin")
+cargo:rustc-link-lib=static=_rust_crypto_helpers
+cargo:rustc-link-search=native=/Users/watanabeyuki/rainbow_table/rb_table/target/debug/build/rust-crypto-0b63b805f5fe8c4c/out
