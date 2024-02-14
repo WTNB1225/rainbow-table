@@ -1,13 +1,35 @@
 extern crate rb_table;
-use rb_table::run;
+use clap::Parser;
 
+#[derive(Parser)]
+#[command(version, about, long_about = None)]
+struct Args {
+    #[arg(short = 'l', long, default_value_t = 1000)]
+    chain_len: usize,
+    #[arg(short = 'n', long, default_value_t = 1000)]
+    chain_num: usize,
+    #[arg(short = 'p', long)]
+    pwd_len: usize,
+    #[arg(short = 'c', long, default_value = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")]
+    pwd_charset: String,
+    #[arg(short = 'd', long)]
+    hash_to_decode: String,
+    #[arg(short = 'a', long, default_value = "md5")]
+    hash_algo: String,
+}
 
 fn main() {
-    rb_table::run(
-        1000,
-        1000,
-        1, 
-        vec!['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        "0cc175b9c0f1b6a831c399e269772661"
-    )
+    let args = Args::parse();
+    rb_table::run(args.chain_len, args.chain_num, args.pwd_len, args.pwd_charset, args.hash_to_decode, args.hash_algo);
 }
+
+//fn main() {
+//    rb_table::run(
+//        1000,
+//        1000,
+//        1, 
+// 
+//        "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".to_string(),
+//        "0cc175b9c0f1b6a831c399e269772661".to_string(),
+//    )
+//}

@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 rust-crypto = "0.2.36"
 clap = { version = "4.5.0", features = ["derive"] }
+rayon = "1.5.1"
+uint = "0.9.5"
